@@ -12,13 +12,13 @@ import {
   SpanQuantity,
 } from './Profile.styled';
 
-const Profile = ({ username, tag, location, avatar, stats }) => {
+const Profile = ({ avatar, username, tag, location, stats }) => {
   return (
     <ProfileDiv>
       <Description>
         <Avatar src={avatar} alt={username} />
         <Name>{username}</Name>
-        <Tag>{tag}</Tag>
+        <Tag>@{tag}</Tag>
         <Location>{location}</Location>
       </Description>
 
@@ -39,6 +39,9 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
     </ProfileDiv>
   );
 };
+
+
+
 
 Profile.propTypes = {
   username: PropTypes.string.isRequired,
